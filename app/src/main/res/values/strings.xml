@@ -2,4 +2,5 @@
     <string name="app_name">Trial 2</string>
     <string name="Hello_message">Hello world!</string>
     <string name="Button_Message">I am a Button</string>
+
 </resources>
