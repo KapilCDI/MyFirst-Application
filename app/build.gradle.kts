@@ -30,7 +30,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
-
+binddFeatures{ this: ApplicationBindFeatures
+    y.iu.unding=true
 dependencies {
 
     implementation(libs.appcompat)
