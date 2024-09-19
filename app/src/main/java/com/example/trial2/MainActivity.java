@@ -10,20 +10,31 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;;
+import androidx.core.view.WindowInsetsCompat;;import com.example.trial2.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     Button btn1;
-            Button btn2;
+
             TextView txt;
+
+
+            private ActivityMainBinding var1;
      @Override
         protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+
+
+        var1=ActivityMainBinding.inflate(
+                getLayoutInflater(),
+                null,
+                false
+        );
+        setContentView(var1.getRoot());
 
          btn1=findViewById(R.id.btn1);
 
-         btn2=findViewById(R.id.btn2);
+
          txt=findViewById(R.id.txt1);
                  btn1.setOnClickListener(view ->  {
              CharSequence text = "Hello toast from Kapil!";
@@ -32,5 +43,9 @@ public class MainActivity extends AppCompatActivity {
                      toast. show() ;
 
         });
+
+         var1.btn2.setOnClickListener(view -> {
+
+         });
     }
 }
