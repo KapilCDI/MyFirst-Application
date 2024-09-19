@@ -9,11 +9,15 @@ android {
     defaultConfig {
         applicationId = "com.example.trial2"
         minSdk = 24
+        //noinspection OldTargetApi,ExpiredTargetSdkVersion
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures{
+        viewBinding=true
     }
 
     buildTypes {
@@ -30,8 +34,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
-binddFeatures{ this: ApplicationBindFeatures
-    y.iu.unding=true
+
 dependencies {
 
     implementation(libs.appcompat)
@@ -42,3 +45,5 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
+
+
